@@ -16,19 +16,21 @@
   <meta name="author" content="Loves Qiang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="设景固定背景图Fluid用户手册有以下的提示  本主题不支持固定背景（fixed），原因：  与目前代码结构有较大冲突，需要大量修改 fixed 在移动端兼容性很差   但是我们仍然可以去固定背景 index页面与其它的页面（归档、关于等）类似，都如下设置 1234567891011121314index:  # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同  # Path of">
+    <meta name="description" content="设景固定背景图Fluid用户手册有以下的提示  本主题不支持固定背景（fixed），原因：  与目前代码结构有较大冲突，需要大量修改 fixed 在移动端兼容性很差   经过测试，在\themes\fluid\source\custom\custom.css中添加以下代码（custom\custom.css为自定义的文件夹名和文件名） 123.banner&amp;#123;  background-at">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo-Fluid主题美化">
 <meta property="og:url" content="https://lovesqiang.github.io/2022/04/02/Hexo-Fluid%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/index.html">
 <meta property="og:site_name" content="落樱只为你">
-<meta property="og:description" content="设景固定背景图Fluid用户手册有以下的提示  本主题不支持固定背景（fixed），原因：  与目前代码结构有较大冲突，需要大量修改 fixed 在移动端兼容性很差   但是我们仍然可以去固定背景 index页面与其它的页面（归档、关于等）类似，都如下设置 1234567891011121314index:  # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同  # Path of">
+<meta property="og:description" content="设景固定背景图Fluid用户手册有以下的提示  本主题不支持固定背景（fixed），原因：  与目前代码结构有较大冲突，需要大量修改 fixed 在移动端兼容性很差   经过测试，在\themes\fluid\source\custom\custom.css中添加以下代码（custom\custom.css为自定义的文件夹名和文件名） 123.banner&amp;#123;  background-at">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lovesqiang/cdn@1.3/images/bg/4.jpg">
 <meta property="article:published_time" content="2022-04-02T15:22:00.000Z">
-<meta property="article:modified_time" content="2022-04-02T16:06:14.708Z">
+<meta property="article:modified_time" content="2022-04-03T14:28:16.035Z">
 <meta property="article:author" content="Loves Qiang">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Fluid">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lovesqiang/cdn@1.3/images/bg/4.jpg">
   
   
   <title>Hexo-Fluid主题美化 - 落樱只为你</title>
@@ -202,7 +204,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      2.2k 字
     </span>
   
 
@@ -211,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12 分钟
+      19 分钟
     </span>
   
 
@@ -251,18 +253,31 @@
 <li><code>fixed</code> 在移动端兼容性很差</li>
 </ol>
 </blockquote>
-<p>但是我们仍然可以去固定背景</p>
-<p>index页面与其它的页面（归档、关于等）类似，都如下设置</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">index:</span><br>  <span class="hljs-comment"># 首页 Banner 头图，可以是相对路径或绝对路径，以下相同</span><br>  <span class="hljs-comment"># Path of Banner image, can be a relative path or an absolute path, the same on other pages</span><br>  <span class="hljs-attr">banner_img:</span> <span class="hljs-string">/img/none.png</span><br><br>  <span class="hljs-comment"># 头图高度，屏幕百分比</span><br>  <span class="hljs-comment"># Height ratio of banner image</span><br>  <span class="hljs-comment"># Available: 0 - 100</span><br>  <span class="hljs-attr">banner_img_height:</span> <span class="hljs-number">100</span><br><br>  <span class="hljs-comment"># 头图黑色蒙版的不透明度，available: 0 - 1.0， 1 是完全不透明</span><br>  <span class="hljs-comment"># Opacity of the banner mask, 1.0 is completely opaque</span><br>  <span class="hljs-comment"># Available: 0 - 1.0 （原来是0.3）</span><br>  <span class="hljs-attr">banner_mask_alpha:</span> <span class="hljs-number">0.0</span><br></code></pre></td></tr></table></figure>
+<p>经过测试，在\themes\fluid\source\custom\custom.css中添加以下代码（custom\custom.css为自定义的文件夹名和文件名）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.banner</span>&#123;<br>  <span class="hljs-attribute">background-attachment</span>: fixed;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>不能固定banner的背景图</p>
+<p>custom.css</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">body</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">https://cdn.jsdelivr.net/gh/lovesqiang/cdn@1.3/images/bg/2.jpg</span>);<br>  <span class="hljs-attribute">background-attachment</span>: fixed;<br>  <span class="hljs-attribute">background-size</span>: cover;  <br>&#125;<br><span class="hljs-selector-class">.banner</span>&#123;<br>  <span class="hljs-attribute">background-attachment</span>: fixed;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>config.fluid.yml</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">index:</span><br>  <span class="hljs-comment"># 首页 Banner 头图，可以是相对路径或绝对路径，以下相同</span><br>  <span class="hljs-comment"># Path of Banner image, can be a relative path or an absolute path, the same on other pages</span><br>  <span class="hljs-attr">banner_img:</span> <span class="hljs-string">https://cdn.jsdelivr.net/gh/lovesqiang/cdn@1.3/images/bg/1.jpg</span><br><br>  <span class="hljs-comment"># 头图高度，屏幕百分比</span><br>  <span class="hljs-comment"># Height ratio of banner image</span><br>  <span class="hljs-comment"># Available: 0 - 100</span><br>  <span class="hljs-attr">banner_img_height:</span> <span class="hljs-number">100</span><br><br>  <span class="hljs-comment"># 头图黑色蒙版的不透明度，available: 0 - 1.0， 1 是完全不透明</span><br>  <span class="hljs-comment"># Opacity of the banner mask, 1.0 is completely opaque</span><br>  <span class="hljs-comment"># Available: 0 - 1.0 （原来是0.3）</span><br>  <span class="hljs-attr">banner_mask_alpha:</span> <span class="hljs-number">0.0</span><br></code></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<p><img src="C:\Users\Legion\Pictures\banner和background.png" srcset="/img/loading.gif" lazyload alt="banner和background"></p>
+<p>由此可以看出，其实这里面有两个图层，一个为banner,另一个应该为body的background</p>
+<p>想要固定背景，我们可以将banner的图片设置为纯白，降低其透明度即可</p>
+<p>index页面与其它的页面（归档、关于等）设置类似，可以根据自己需求自己做出调整</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">index:</span><br>  <span class="hljs-comment"># 首页 Banner 头图，可以是相对路径或绝对路径，以下相同</span><br>  <span class="hljs-comment"># Path of Banner image, can be a relative path or an absolute path, the same on other pages</span><br>  <span class="hljs-attr">banner_img:</span> <span class="hljs-string">/img/none.png</span><br><br>  <span class="hljs-comment"># 头图高度，屏幕百分比</span><br>  <span class="hljs-comment"># Height ratio of banner image</span><br>  <span class="hljs-comment"># Available: 0 - 100</span><br>  <span class="hljs-attr">banner_img_height:</span> <span class="hljs-number">100</span><br><br>  <span class="hljs-comment"># 头图黑色蒙版的不透明度，available: 0 - 1.0， 1 是完全不透明</span><br>  <span class="hljs-comment"># Opacity of the banner mask, 1.0 is completely opaque</span><br>  <span class="hljs-comment"># Available: 0 - 1.0 （原来是0.3）</span><br>  <span class="hljs-attr">banner_mask_alpha:</span> <span class="hljs-number">0.0</span><br></code></pre></td></tr></table></figure>
 
 <p>banner的背景图（banner_img）选一张纯白色的背景图</p>
-<p>将banner_mask_alpha的值设为0.0，表示完全透明</p>
+<p>将banner_mask_alpha的值设为0.0，表示完全透明，也可以设置为其它值</p>
 <p>在themes\fluid\source目录下新建一个custom文件夹（用于存放自定义的css、js等）</p>
 <p>在custom文件夹中创建一个custom.css文件，代码如下</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">body</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">https://cdn.jsdelivr.net/gh/lovesqiang/cdn@1.3/images/bg/1.jpg</span>);<br>  <span class="hljs-attribute">background-attachment</span>: fixed;	<span class="hljs-comment">/* 固定背景 */</span><br>  <span class="hljs-attribute">background-size</span>: cover;  <br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>这样，就完成了达到了固定背景的效果</p>
-<p>其实这里面有两个图层，一个为banner,另一个应该为background</p>
+<p>存在问题：移动端支持不是很好</p>
 <h2 id="主面板透明"><a href="#主面板透明" class="headerlink" title="主面板透明"></a>主面板透明</h2><p>只需在_config.fluid.yml 文件中修改如下代码</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># 主面板背景色</span><br>  <span class="hljs-comment"># Color of main board</span><br>  <span class="hljs-comment"># board_color: &quot;#fff&quot;   #原来的样式</span><br>  <span class="hljs-comment"># board_color_dark: &quot;#252d38&quot;</span><br>  <span class="hljs-attr">board_color:</span> <span class="hljs-string">&quot;rgba(255, 255, 255, 0.6)&quot;</span><br>  <span class="hljs-attr">board_color_dark:</span> <span class="hljs-string">&quot;rgba(37, 45, 56, 0.6)&quot;</span><br></code></pre></td></tr></table></figure>
 
