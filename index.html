@@ -25,15 +25,19 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+  
   <title>落樱只为你</title>
 
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
 
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
 
 
 
@@ -42,7 +46,13 @@
 
 <link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
 
   
 <link rel="stylesheet" href="/custom/custom.css">
@@ -51,19 +61,32 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"lovesqiang.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"lovesqiang.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+
+  
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>落樱只为你</strong>
+      <strong>零衣</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -142,6 +165,7 @@
               &nbsp;<i class="iconfont icon-search"></i>&nbsp;
             </a>
           </li>
+          
         
         
           <li class="nav-item" id="color-toggle-btn">
@@ -154,34 +178,40 @@
   </div>
 </nav>
 
-    <div class="banner" id="banner" parallax=true
-         style="background: url('https://cdn.jsdelivr.net/gh/lovesqiang/cdn@1.3/images/bg/1.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="东边日出西边雨，道是无晴却有晴">
-              
-            </span>
+  
 
-            
-          </div>
-
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://cdn.jsdelivr.net/gh/lovesqiang/cdn@1.3/images/bg/1.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
           
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
+            <span id="subtitle" data-typed-text="东边日出西边雨，道是无晴却有晴"></span>
           
         </div>
+
+        
       </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
+  </div>
+</div>
+
+</div>
+
   </header>
 
   <main>
     
       <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
+        <div id="board"
+          style="margin-top: 0">
           
           <div class="container">
             <div class="row">
@@ -200,12 +230,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/05/27/hello-world/" target="_self">
+      <a class="index-excerpt" href="/2022/05/27/hello-world/" target="_self">
+        <div>
           
           Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -239,12 +269,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/09/Iconfont%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_self">
+      <a class="index-excerpt" href="/2022/04/09/Iconfont%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87%E7%9A%84%E4%BD%BF%E7%94%A8/" target="_self">
+        <div>
           
           在博客中使用Iconfont自定义图标
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -256,22 +286,41 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Iconfont/">Iconfont</a>
-            
-              <a href="/categories/Iconfont/blog/">blog</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Iconfont/" class="category-chain-item">Iconfont</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Iconfont/blog/" class="category-chain-item">blog</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Iconfont/">Iconfont</a>
+              <a href="/tags/Iconfont/">#Iconfont</a>
             
-              <a href="/tags/blog/">blog</a>
+              <a href="/tags/blog/">#blog</a>
             
           </div>
         
@@ -296,12 +345,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/04/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" target="_self">
+      <a class="index-excerpt" href="/2022/04/04/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" target="_self">
+        <div>
           
           图床概述图床：专门用于储存图片的服务器，将图片上传到服务器中后，可以在公网中通过指定的 URL 获取图片 优点：将图片的链接放到互联网上，可以在任何时间，任何地点、任何设备访问到图床上的图片   搭建准备这里使用 GitHub 来搭建图床 使用 PicGo 上传图片 使用 jsDelivr 进行 CDN 加速   GitHub 搭建图床  新建一个仓库 注意两点： ​    （1）该仓库公开（pu
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -317,7 +366,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a>
+              <a href="/tags/%E5%9B%BE%E5%BA%8A/">#图床</a>
             
           </div>
         
@@ -342,12 +391,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/02/Hexo-Fluid%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" target="_self">
+      <a class="index-excerpt" href="/2022/04/02/Hexo-Fluid%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" target="_self">
+        <div>
           
           固定背景图Fluid用户手册有以下的提示  本主题不支持固定背景（fixed），原因：  与目前代码结构有较大冲突，需要大量修改 fixed 在移动端兼容性很差   经过测试，在\themes\fluid\source\custom\custom.css中添加以下代码（custom\custom.css为自定义的文件夹名和文件名） 123.banner&amp;#123;  background-atta
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -359,20 +408,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Fluid%E7%BE%8E%E5%8C%96/">Fluid美化</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Fluid%E7%BE%8E%E5%8C%96/" class="category-chain-item">Fluid美化</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Hexo/">Hexo</a>
+              <a href="/tags/Hexo/">#Hexo</a>
             
-              <a href="/tags/Fluid/">Fluid</a>
+              <a href="/tags/Fluid/">#Fluid</a>
             
           </div>
         
@@ -391,12 +454,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/01/Text/" target="_self">
+      <a class="index-excerpt" href="/2022/04/01/Text/" target="_self">
+        <div>
           
           以下是文章内容Text               文字 或者 markdown 均可               代码测试，主要是包含代码的名称               TypeListener.java                   123456789101112131415161718192021222324252627282930313233343536import com.qi
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -412,9 +475,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Hexo/">Hexo</a>
+              <a href="/tags/Hexo/">#Hexo</a>
             
-              <a href="/tags/Fluid/">Fluid</a>
+              <a href="/tags/Fluid/">#Fluid</a>
             
           </div>
         
@@ -433,12 +496,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2018/12/12/Hexo-Theme-Sakura/" target="_self">
+      <a class="index-excerpt" href="/2018/12/12/Hexo-Theme-Sakura/" target="_self">
+        <div>
           
           hexo-sakura主题使用教程
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -450,20 +513,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/web/">web</a>
+              <a href="/tags/web/">#web</a>
             
-              <a href="/tags/%E6%82%A6%E8%AF%BB/">悦读</a>
+              <a href="/tags/%E6%82%A6%E8%AF%BB/">#悦读</a>
             
           </div>
         
@@ -502,35 +579,37 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
     </div>
   </div>
 </div>
+
     
 
     
   </main>
 
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     Framework  <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> | Theme  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
+  <footer>
+    <div class="footer-inner">
   
-
+    <div class="footer-content">
+       Framework  <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> | Theme  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
   
-
   
-</footer>
-
-
-  <!-- SCRIPTS -->
   
-  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -541,40 +620,23 @@
   </script>
 
 
-<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
-<!-- Plugins -->
 
-
-  <script  src="/js/local-search.js" ></script>
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
       
-        typing(title);
+        typing(text);
       
     })(window, document);
   </script>
@@ -584,10 +646,14 @@
 
 
 
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
+  <script  src="/js/local-search.js" ></script>
 
 
 
@@ -597,10 +663,16 @@
 
 
 
-<!-- 主题的启动项 保持在最底部 -->
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
 <script  src="/js/boot.js" ></script>
 
 
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 <!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/gh/lovesqiang/cdn/js/backgroundize.js"></script>
   <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lovesqiang/cdn/css/backgroundize.css" />
   <!-- hexo injector body_end end --></body>
